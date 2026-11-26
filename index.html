@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>FindMe: share where you are, privately, with no live tracking</title>
+<meta name="description" content="FindMe is a free Android app that turns a GPS fix into a message with Google Maps and Waze links for WhatsApp, text or email. No live tracking, no account, no adverts and no internet permission.">
+<meta name="author" content="Jonathan Jackson">
+<link rel="canonical" href="https://customgpter.github.io/findme/">
+<meta name="theme-color" content="#eef4f3" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#091421" media="(prefers-color-scheme: dark)">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="FindMe">
+<meta property="og:title" content="FindMe: share where you are, privately, with no live tracking">
+<meta property="og:description" content="FindMe is a free Android app that turns a GPS fix into a message with Google Maps and Waze links for WhatsApp, text or email. No live tracking, no account, no adverts and no internet permission.">
+<meta property="og:url" content="https://customgpter.github.io/findme/">
+<meta property="og:image" content="https://customgpter.github.io/findme/assets/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="FindMe&#x27;s home screen: a teal map pin over the words Your location. Your choice.">
+<meta property="og:locale" content="en_GB">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="./assets/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="./assets/apple-touch-icon.png">
+<link rel="preload" href="./assets/fonts/bricolage-grotesque-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="./assets/fonts/atkinson-hyperlegible-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="./assets/site.css?v=1">
+<link rel="stylesheet" href="./assets/house.css?v=1">
+<link rel="stylesheet" href="./assets/apps-list.css?v=1">
+<script src="./assets/apps-list.js?v=1" defer></script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"FindMe","url":"https://customgpter.github.io/findme/","description":"FindMe is a free Android app that turns a GPS fix into a message with Google Maps and Waze links for WhatsApp, text or email. No live tracking, no account, no adverts and no internet permission.","applicationCategory":"UtilitiesApplication","operatingSystem":"Android 10 or later","softwareVersion":"1.0.1","downloadUrl":"https://github.com/CustomGPTer/findme/releases/latest/download/FindMe.apk","releaseNotes":"https://customgpter.github.io/findme/releases.html","offers":{"@type":"Offer","price":"0","priceCurrency":"GBP"},"inLanguage":"en-GB","image":"https://customgpter.github.io/findme/assets/og.png","featureList":["A message anyone can open","Accuracy you can see","You press send","Timed check-ins","Moved away?","Still here","Shortcut and tile","Made to fit you","No internet permission","Encrypted on the phone","No history kept"],"author":{"@type":"Person","name":"Jonathan Jackson"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Is FindMe free?","acceptedAnswer":{"@type":"Answer","text":"Yes. There is no paid version, no subscription and no adverts."}},{"@type":"Question","name":"Is it on Google Play?","acceptedAnswer":{"@type":"Answer","text":"No. FindMe is a personal project and is downloaded from this site as an Android app file. It needs Android 10 or later."}},{"@type":"Question","name":"Does the other person need FindMe?","acceptedAnswer":{"@type":"Answer","text":"No. They get an ordinary message with a Google Maps link, a Waze link and the coordinates. Any phone or computer can open it."}},{"@type":"Question","name":"Is this live tracking?","acceptedAnswer":{"@type":"Answer","text":"No. FindMe sends one fixed point, taken when you tap share. If you move, it can remind you to send a new one, but it never updates anyone by itself."}},{"@type":"Question","name":"Does it need the internet?","acceptedAnswer":{"@type":"Answer","text":"No. GPS works with no signal, and FindMe has no internet permission at all. Sending the message, and opening the links, use the other apps' own connections."}},{"@type":"Question","name":"How accurate is it?","acceptedAnswer":{"@type":"Answer","text":"As accurate as your phone's GPS at that moment, which FindMe shows, usually within 5 to 20 metres outdoors. Indoors and among tall buildings it can be much less. Low-accuracy fixes are flagged and the accuracy is written into the message."}},{"@type":"Question","name":"Will reminders always arrive on time?","acceptedAnswer":{"@type":"Answer","text":"Usually, but Android can delay them to save battery, and a phone restart or force-stop ends them. FindMe never restarts movement checks by itself. It is not an emergency service."}},{"@type":"Question","name":"Can I delete what I have shared?","acceptedAnswer":{"@type":"Answer","text":"You can delete everything FindMe keeps, from Settings, at any time. A message you have already sent stays in WhatsApp, Messages or email, and the person who got it can keep or forward it."}},{"@type":"Question","name":"Why can't I take a screenshot of FindMe?","acceptedAnswer":{"@type":"Answer","text":"Your location is on screen, so FindMe blocks screenshots and blurs itself in the recent apps view. The message you send is not affected."}},{"@type":"Question","name":"How do I get new versions?","acceptedAnswer":{"@type":"Answer","text":"Open Settings and tap Check for updates. It opens the releases page in your browser. Download the new file and open it to install it over the old one; your settings are kept."}},{"@type":"Question","name":"Who made it?","acceptedAnswer":{"@type":"Answer","text":"FindMe is made by Jonathan Jackson, an independent developer in the United Kingdom. It is not connected with Google, Waze or WhatsApp."}}]}</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="masthead">
+<div class="wrap">
+<a class="brand" href="./" aria-label="FindMe home"><svg viewBox="0 0 108 108" aria-hidden="true"><rect width="108" height="108" rx="24" fill="#0B1929"/><path fill="none" stroke="#20483F" stroke-width="1.2" d="M16,54a38,38 0,1 0,76 0a38,38 0,1 0,-76 0M26,54a28,28 0,1 0,56 0a28,28 0,1 0,-56 0"/><path fill="#54E4C2" d="M54,22c-16,0 -27,11 -27,26c0,20 27,40 27,40s27,-20 27,-40c0,-15 -11,-26 -27,-26z"/><path fill="#0B1929" d="M54,35a13,13 0,1 1,0 26a13,13 0,1 1,0 -26"/><path fill="#FFFFFF" d="M54,42a6,6 0,1 1,0 12a6,6 0,1 1,0 -12"/></svg><span>FindMe</span></a>
+<nav aria-label="Main"><ul><li><a href="./#features">Features</a></li><li><a href="./compare.html">Compare</a></li><li><a href="./releases.html">Releases</a></li><li><a class="more-apps" href="./more-apps.html"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="4" width="6.5" height="6.5" rx="1.6"/><rect x="13.5" y="4" width="6.5" height="6.5" rx="1.6"/><rect x="4" y="13.5" width="6.5" height="6.5" rx="1.6"/><rect x="13.5" y="13.5" width="6.5" height="6.5" rx="1.6"/></svg>More apps</a></li></ul></nav>
+<a class="button small" href="https://github.com/CustomGPTer/findme/releases/latest/download/FindMe.apk"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v11"/><path d="M7 10.5l5 5 5-5"/><path d="M5 20h14"/></svg>Download</a>
+</div>
+</header>
+<main id="main">
+<div class="hero">
+<div class="wrap hero-grid">
+<div class="hero-copy">
+<h1>Your location. Your choice.</h1>
+<p class="lede">FindMe gets a GPS fix on your phone and turns it into a short message with Google Maps and Waze links. Send it on WhatsApp, by text or by email, and the person you are meeting taps a link to find you. They don't need FindMe.</p><p class="lede">It is one location, sent when you choose, not live tracking. FindMe has no internet permission, no account and no adverts, and what it keeps on your phone is encrypted.</p>
+
+<p class="get" id="download"><a class="button" href="https://github.com/CustomGPTer/findme/releases/latest/download/FindMe.apk"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v11"/><path d="M7 10.5l5 5 5-5"/><path d="M5 20h14"/></svg>Download for Android</a><a class="aside" href="#install">How to install</a></p>
+<ul class="pills"><li>Version 1.0.1</li><li>Android 10 or later</li><li>455 KB</li></ul>
+<p class="facts">Free, with nothing to unlock. No adverts, no account with the developer, no tracking. <a href="compare.html">Compare</a> or read the <a href="releases.html">release notes</a>.</p>
+<p class="facts">Chrome may say the file might be harmful. It shows this for app files that do not come from Google Play. Choose Download anyway.</p>
+</div>
+<div class="hero-phone"><div class="phone"><img src="./assets/screens/home.png" alt="Home: one button to share where you are, and a reminder of what FindMe will and won&#x27;t do." width="393" height="852" fetchpriority="high"></div></div>
+</div>
+</div>
+
+<section class="promises" aria-label="In short">
+<div class="wrap"><ul><li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M8.6 12.4l2.3 2.3 4.5-4.9"/></svg><span><b>No live tracking</b><span>You send one fixed point. Nothing follows you.</span></span></li><li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M8.6 12.4l2.3 2.3 4.5-4.9"/></svg><span><b>No internet permission</b><span>Android won&#x27;t let FindMe go online.</span></span></li><li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M8.6 12.4l2.3 2.3 4.5-4.9"/></svg><span><b>No account</b><span>Nothing to sign up for, nothing to log in to.</span></span></li><li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M8.6 12.4l2.3 2.3 4.5-4.9"/></svg><span><b>Nothing needed at their end</b><span>They open your link in Google Maps or Waze.</span></span></li></ul></div>
+</section>
+
+<section id="screens" aria-labelledby="screens-h">
+<div class="wrap">
+<h2 id="screens-h">A look inside</h2>
+<p class="intro">These are FindMe&#x27;s real screens, drawn from the app&#x27;s own code with a made-up name and a public point in Manchester city centre. Swipe or scroll sideways to see them all.</p>
+<div class="gallery" tabindex="0" role="region" aria-label="Screens from FindMe"><figure class="shot"><div class="phone"><img src="./assets/screens/home.png" alt="Home: one button to share where you are, and a reminder of what FindMe will and won&#x27;t do." width="393" height="852" loading="eager" decoding="async"></div><figcaption>Home: one button to share where you are, and a reminder of what FindMe will and won&#x27;t do.</figcaption></figure><figure class="shot"><div class="phone"><img src="./assets/screens/share.png" alt="A fresh GPS fix with its accuracy, your name, an optional meeting note and who it&#x27;s for." width="393" height="852" loading="eager" decoding="async"></div><figcaption>A fresh GPS fix with its accuracy, your name, an optional meeting note and who it&#x27;s for.</figcaption></figure><figure class="shot"><div class="phone"><img src="./assets/screens/preview.png" alt="The message before it goes: time, note, Google Maps and Waze links, coordinates and accuracy." width="393" height="852" loading="eager" decoding="async"></div><figcaption>The message before it goes: time, note, Google Maps and Waze links, coordinates and accuracy.</figcaption></figure><figure class="shot"><div class="phone"><img src="./assets/screens/send.png" alt="Send it with WhatsApp, a text message, email or any other app. You pick the person there." width="393" height="852" loading="eager" decoding="async"></div><figcaption>Send it with WhatsApp, a text message, email or any other app. You pick the person there.</figcaption></figure><figure class="shot"><div class="phone"><img src="./assets/screens/confirm.png" alt="Once you have sent it, choose a reminder: a timed check-in, or a nudge when you move away." width="393" height="852" loading="eager" decoding="async"></div><figcaption>Once you have sent it, choose a reminder: a timed check-in, or a nudge when you move away.</figcaption></figure><figure class="shot"><div class="phone"><img src="./assets/screens/due.png" alt="Have you changed location? Share an update, say you&#x27;re still here, or stop." width="393" height="852" loading="eager" decoding="async"></div><figcaption>Have you changed location? Share an update, say you&#x27;re still here, or stop.</figcaption></figure><figure class="shot"><div class="phone"><img src="./assets/screens/privacy.png" alt="Privacy in plain language: what stays on your phone, and what leaves only when you share it." width="393" height="852" loading="eager" decoding="async"></div><figcaption>Privacy in plain language: what stays on your phone, and what leaves only when you share it.</figcaption></figure><figure class="shot"><div class="phone"><img src="./assets/screens/home-light.png" alt="The same home screen in the light theme. There are four accent colours as well." width="393" height="852" loading="eager" decoding="async"></div><figcaption>The same home screen in the light theme. There are four accent colours as well.</figcaption></figure></div>
+</div>
+</section>
+
+<section id="how" aria-labelledby="how-h">
+<div class="wrap">
+<h2 id="how-h">How it works</h2>
+<p class="intro">Three steps, and you stay in charge of each one.</p>
+<ol class="steps"><li><h3>Get a fix</h3><p>Tap Share my location. FindMe asks Android's GPS for a fresh position and shows how accurate it is. It works with no signal; outdoors is quickest.</p></li><li><h3>Check the message</h3><p>Add your name and a note such as Beside the main entrance. You see exactly what will be sent before anything leaves the app.</p></li><li><h3>Send it your way</h3><p>Pick WhatsApp, a text, email or another app, choose the person there and send. Then, if you like, set a reminder to check whether you have moved.</p></li></ol>
+</div>
+</section>
+
+<section id="features" aria-labelledby="features-h">
+<div class="wrap">
+<h2 id="features-h">Everything is in, and all of it is free</h2>
+<p class="intro">Nothing below is held back for a paid tier, because there is no paid tier.</p>
+<div class="groups"><div class="group"><h3>Sharing</h3><dl><div><dt>A message anyone can open</dt><dd>Google Maps and Waze links, plain coordinates for any other map, the time, your name and your note. The other person needs no app and no account.</dd></div><div><dt>Accuracy you can see</dt><dd>Every fix shows its accuracy and age. Old fixes are refused, low-accuracy ones are flagged, and mock locations are ignored.</dd></div><div><dt>You press send</dt><dd>FindMe hands the message to the app you choose. Nothing is ever sent automatically.</dd></div></dl></div><div class="group"><h3>Reminders, not tracking</h3><dl><div><dt>Timed check-ins</dt><dd>Every 5 to 60 minutes for up to four hours, FindMe asks Have you changed location? GPS is not left running.</dd></div><div><dt>Moved away?</dt><dd>Or let FindMe nudge you when you are 50 to 10,000 metres from where you shared, after three accurate readings over 30 seconds, with a Stop button always showing.</dd></div><div><dt>Still here</dt><dd>Tap Still here to keep your shared point and snooze the next check, or Share update to send a new one.</dd></div></dl></div><div class="group"><h3>Quick to reach</h3><dl><div><dt>Shortcut and tile</dt><dd>A home-screen shortcut and a Quick Settings tile open the sharing screen, ready for you to check and send.</dd></div><div><dt>Made to fit you</dt><dd>Dark, light or follow-system themes, four accent colours, reduced motion and haptics you can switch off. Text follows Android's size setting.</dd></div></dl></div><div class="group"><h3>Private by design</h3><dl><div><dt>No internet permission</dt><dd>Android does not let FindMe connect to anything. Links you send are opened by the other person's own apps.</dd></div><div><dt>Encrypted on the phone</dt><dd>Your name, settings and any active reminder are encrypted with a key held in Android Keystore. Backups, screenshots and recent-app previews are blocked.</dd></div><div><dt>No history kept</dt><dd>There is no list of places you have been. A reminder's location is deleted when it ends, and an optional app lock asks for your fingerprint or PIN.</dd></div></dl></div></div>
+</div>
+</section>
+
+<section id="privacy" aria-labelledby="privacy-h">
+<div class="wrap">
+<h2 id="privacy-h">Your location stays yours</h2>
+<ul class="plain"><li><h3>No internet permission</h3><p>FindMe can't send anything anywhere. You send the message yourself, in the app you choose.</p></li><li><h3>No account, no history</h3><p>No sign-up, no server, no adverts, and no record of where you have been.</p></li><li><h3>Encrypted and locked away</h3><p>What FindMe keeps is encrypted, left out of backups and hidden from screenshots.</p></li></ul>
+</div>
+</section>
+
+<section id="install" aria-labelledby="install-h">
+<div class="wrap">
+<h2 id="install-h">Installing and updating</h2>
+<p class="intro">FindMe is not on Google Play, so your phone asks a couple of extra questions the first time.</p>
+<ol class="steps"><li><h3>Download the app file</h3><p>Tap Download on your phone. The file is called FindMe.apk and is about 455 KB. If Chrome says the file might be harmful, choose Download anyway.</p></li><li><h3>Allow the install</h3><p>Open the file. The first time, Android asks you to allow your browser to install apps. Allow it, go back and tap Install. If Google Play Protect steps in, choose More details, then Install anyway.</p></li><li><h3>Updating later</h3><p>In FindMe, open Settings and tap Check for updates. It opens the releases page in your browser, because FindMe itself never goes online. Download the new file and open it to install it over the old one. Your settings are kept.</p></li></ol>
+<p class="after-table">Version 1.0.1, released 26 November 2026. See the <a href="releases.html">release notes</a>, or <a href="releases.html#checking">check your download</a>.</p>
+</div>
+</section>
+
+<section id="questions" aria-labelledby="questions-h">
+<div class="wrap">
+<h2 id="questions-h">Questions</h2>
+<div class="faq"><details><summary>Is FindMe free?</summary><p>Yes. There is no paid version, no subscription and no adverts.</p></details><details><summary>Is it on Google Play?</summary><p>No. FindMe is a personal project and is downloaded from this site as an Android app file. It needs Android 10 or later.</p></details><details><summary>Does the other person need FindMe?</summary><p>No. They get an ordinary message with a Google Maps link, a Waze link and the coordinates. Any phone or computer can open it.</p></details><details><summary>Is this live tracking?</summary><p>No. FindMe sends one fixed point, taken when you tap share. If you move, it can remind you to send a new one, but it never updates anyone by itself.</p></details><details><summary>Does it need the internet?</summary><p>No. GPS works with no signal, and FindMe has no internet permission at all. Sending the message, and opening the links, use the other apps' own connections.</p></details><details><summary>How accurate is it?</summary><p>As accurate as your phone's GPS at that moment, which FindMe shows, usually within 5 to 20 metres outdoors. Indoors and among tall buildings it can be much less. Low-accuracy fixes are flagged and the accuracy is written into the message.</p></details><details><summary>Will reminders always arrive on time?</summary><p>Usually, but Android can delay them to save battery, and a phone restart or force-stop ends them. FindMe never restarts movement checks by itself. It is not an emergency service.</p></details><details><summary>Can I delete what I have shared?</summary><p>You can delete everything FindMe keeps, from Settings, at any time. A message you have already sent stays in WhatsApp, Messages or email, and the person who got it can keep or forward it.</p></details><details><summary>Why can&#x27;t I take a screenshot of FindMe?</summary><p>Your location is on screen, so FindMe blocks screenshots and blurs itself in the recent apps view. The message you send is not affected.</p></details><details><summary>How do I get new versions?</summary><p>Open Settings and tap Check for updates. It opens the releases page in your browser. Download the new file and open it to install it over the old one; your settings are kept.</p></details><details><summary>Who made it?</summary><p>FindMe is made by Jonathan Jackson, an independent developer in the United Kingdom. It is not connected with Google, Waze or WhatsApp.</p></details></div>
+</div>
+</section>
+
+<section class="closing" aria-labelledby="closing-h">
+<div class="wrap">
+<div><h2 id="closing-h">Meet up, without being tracked</h2><p>Free, with no adverts and nothing to unlock. Made by the developer of several other free Android apps: <a href="more-apps.html">see them all</a>.</p></div>
+<a class="button" href="https://github.com/CustomGPTer/findme/releases/latest/download/FindMe.apk"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v11"/><path d="M7 10.5l5 5 5-5"/><path d="M5 20h14"/></svg>Download for Android</a>
+</div>
+</section>
+</main>
+<footer class="colophon">
+<div class="wrap">
+<div>
+<a class="brand" href="./" aria-label="FindMe home"><svg viewBox="0 0 108 108" aria-hidden="true"><rect width="108" height="108" rx="24" fill="#0B1929"/><path fill="none" stroke="#20483F" stroke-width="1.2" d="M16,54a38,38 0,1 0,76 0a38,38 0,1 0,-76 0M26,54a28,28 0,1 0,56 0a28,28 0,1 0,-56 0"/><path fill="#54E4C2" d="M54,22c-16,0 -27,11 -27,26c0,20 27,40 27,40s27,-20 27,-40c0,-15 -11,-26 -27,-26z"/><path fill="#0B1929" d="M54,35a13,13 0,1 1,0 26a13,13 0,1 1,0 -26"/><path fill="#FFFFFF" d="M54,42a6,6 0,1 1,0 12a6,6 0,1 1,0 -12"/></svg><span>FindMe</span></a>
+<p>&copy; 2026 Jonathan Jackson. FindMe is an independent app.</p>
+<p>This site uses no cookies and no tracking.</p>
+<p>Set in Bricolage Grotesque and Atkinson Hyperlegible.</p>
+</div>
+<nav aria-label="The app"><h2>The app</h2><ul>
+<li><a href="./">Home</a></li>
+<li><a href="./compare.html">Compare</a></li>
+<li><a href="./releases.html">Release notes</a></li>
+
+</ul></nav>
+<nav aria-label="Legal"><h2>Legal</h2><ul>
+<li><a href="./privacy.html">Privacy policy</a></li>
+<li><a href="./terms.html">Terms of use</a></li>
+<li><a href="./licences.html">Licences</a></li>
+</ul></nav>
+<nav aria-label="More"><h2>More</h2><ul>
+<li><a href="./more-apps.html">More apps</a></li>
+<li><a href="https://customgpter.github.io/">All apps</a></li>
+<li><a href="https://github.com/CustomGPTer/findme/issues">Contact</a></li>
+</ul></nav>
+</div>
+</footer>
+</body>
+</html>
